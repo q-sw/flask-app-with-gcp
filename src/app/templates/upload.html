@@ -1,0 +1,16 @@
+
+  <body>
+    {% extends 'navbar.html' %}
+    {% block content %}
+    <h1>Upload your files</h1>
+    <div class="container text-center">
+      <form class="row gy-2 gx-3 align-items-center" method="POST" enctype="multipart/form-data">
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupFile01"></label>
+          <input type="file" class="form-control" id="inputGroupFile01" name="file">
+          <button class="btn btn-outline-secondary" type="submit" id="inputGroupFileAddon04">Upload</button>
+        </div>
+      </form>
+    </div>
+    {%endblock%}
+  </body>

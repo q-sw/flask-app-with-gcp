@@ -1,0 +1,15 @@
+ <body>
+    {% extends 'navbar.html' %}
+    {% block content %}
+    <h1>Welcome to the Demonstration </h1>
+    <div class="container text-center">
+      <div class="row gy-2">
+		  	{%for s  in slides %}
+		  	<div class="col-sm-4" >
+          <a href="{{url_for('.img', id=s.id)}}"> <img src="{{ s.blob_url }}" class="img-thumbnail" alt="{{ s.blob_name }}" style="width:400px;height:200px;"> </a>
+        </div>
+        {% endfor %}
+		  </div>
+		</div>
+    {%endblock%}
+  </body>
