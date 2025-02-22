@@ -1,6 +1,6 @@
 FROM --platform=x86_64 python:3.10-alpine AS builder
 
-COPY app/ /opt/app
+COPY src/ /opt/app
 WORKDIR /opt/app
 
 RUN --mount=type=cache,target=/root/.cache/pip \
